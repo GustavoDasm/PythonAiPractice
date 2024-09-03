@@ -13,7 +13,7 @@ def generarNombres(num1, num2):
     #Tanto row_names como col_names se generan usando list comprehensions, que son una manera concisa y 
     # eficiente de crear listas en Python.
     list1 = [f"fila {i + 1}" for i in range(num1)] 
-    list2 = [f"columna {i + 1}" for i in range(num2)]
+    list2 = [f"columna {i + 1}" for i in range(num2)]   
     return list1, list2 
 #print(generarNombres(3, 4))
 
@@ -143,6 +143,8 @@ df_2['Numeros Enteros'].describe()   #Describir todo, sum , max... etc
 # Calcula suma en una fila
 df_2['Promedio E y D'] = (df_2['Numeros Decimales'] + df_2['Numeros Enteros'])/2
 print(df_2.round(2))
+
+append = np.append
 
 
 
