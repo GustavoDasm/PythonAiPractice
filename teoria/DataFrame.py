@@ -143,8 +143,12 @@ df_2['Numeros Enteros'].describe()   #Describir todo, sum , max... etc
 # Calcula suma en una fila
 df_2['Promedio E y D'] = (df_2['Numeros Decimales'] + df_2['Numeros Enteros'])/2
 print(df_2.round(2))
+append = np.append  
 
-append = np.append
+# Mostrar elementos pares
+pares = df_2[::2]
+print(f"\nElementos Pares: \n{pares}")
 
+np.random.seed(1)
 
 
