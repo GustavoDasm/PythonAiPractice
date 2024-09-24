@@ -4,8 +4,8 @@ from os import system
 system("cls")
 
 def generarCuadrados(n):
-    list = [i*i for i in range(1, n + 1)]
-    return list
+    lista = [i*i for i in range(1, n + 1)]
+    return lista
 
 print(generarCuadrados(5))
 
@@ -61,7 +61,6 @@ poblacion = [10000.555559, 20000.555559, 30000.555559, 40000.555559, 50000.55555
 
 diccionario = {'Pais': pais, 'Poblacion':poblacion}
 df_2 = pd.DataFrame(diccionario, index=[i for i in range(1, 10)])
-system("cls")
 print(df_2)
 
 #  leerCSV = pd.read_csv('datos.csv')
@@ -110,6 +109,8 @@ print(f"{'Minimo index':>20}: {min(df_2.index)}")
 # Agregar una nueva columna al dataframe
 df_2['Longitud'] = 52
 
+# Cambiar el nombre de 1 o varias columnas
+df_2.rename(columns={'Longitud': 'ColumnaCambiada'}, inplace=True)
 
 # ---------------------------------------
 # NUMPY
@@ -142,8 +143,7 @@ df_2['Numeros Enteros'].describe()   #Describir todo, sum , max... etc
 
 # Calcula suma en una fila
 df_2['Promedio E y D'] = (df_2['Numeros Decimales'] + df_2['Numeros Enteros'])/2
-print(df_2.round(2))
-append = np.append  
+print(df_2.round(2)) 
 
 # Mostrar elementos pares
 pares = df_2[::2]
